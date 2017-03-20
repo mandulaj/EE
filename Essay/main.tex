@@ -1,0 +1,72 @@
+\documentclass[12pt]{report}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
+
+%bibliograpgy
+\usepackage[american]{babel}
+\usepackage{csquotes}
+\usepackage[style=mla,backend=biber,autocite=footnote]{biblatex}
+
+
+\addbibresource{mla-test-bib.bib}
+\DeclareAutoCiteCommand{footnote}[f]{\footcite}{\footcites}
+
+
+\newcommand{\mychapter}[2]{
+    \setcounter{chapter}{#1}
+    \setcounter{section}{0}
+    \chapter*{#2}
+    \addcontentsline{toc}{chapter}{#2}
+}
+
+\begin{document}
+\begin{titlepage}
+	\centering
+	\includegraphics[width=0.15\textwidth]{example-image-1x1}\par\vspace{1cm}
+	{\scshape\LARGE Vienna International School \par}
+	\vspace{1cm}
+	{\scshape\Large Extended Essay \par}
+	\vspace{1.5cm}
+	{\huge\bfseries Predicting the breakdown probability for a plasma discharge in the GOLEM tokamak\par}
+	\vspace{2cm}
+	{\Large\itshape Jakub Mandula\par}
+	\vfill
+	supervised by\par
+	 Marcia \textsc{Clarke}
+
+	\vfill
+
+% Bottom of the page
+	{\large \today\par}
+\end{titlepage}
+
+
+\mychapter{0}{Abstract}
+This is my abstract
+
+\tableofcontents
+
+\mychapter{1}{Introduction}
+\input{chapters/introduction}
+
+\mychapter{2}{Background information}
+\input{chapters/background}
+
+\mychapter{3}{Theory}
+\input{chapters/theory}
+
+
+\mychapter{4}{Conclusion}
+\input{chapters/conclusion}
+
+
+\mychapter{5}{Bibliography}
+\printbibliography
+
+\appendix
+\mychapter{6}{Appendix Title}
+\input{chapters/appendixA}
+
+\end{document}

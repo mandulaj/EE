@@ -1,0 +1,47 @@
+\documentclass[15pt]{report}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+\usepackage[utf8]{inputenc}
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
+
+
+\begin{document}
+\begin{titlepage}
+	\centering
+	\includegraphics[width=0.15\textwidth]{vislog.gif}\par\vspace{1cm}
+	{\scshape\LARGE Vienna International School \par}
+	\vspace{1cm}
+	{\scshape\Large Extended Essay \par}
+	\vspace{1.5cm}
+	{\huge\bfseries Predicting the breakdown probability for a plasma discharge in the GOLEM tokamak\par}
+	\vspace{2cm}
+	{\Large\itshape Jakub Mandula\par}
+	\vfill
+	supervised by\par
+	 Marcia \textsc{Clarke}
+
+	\vfill
+
+% Bottom of the page
+	{\large \today\par}
+\end{titlepage}
+
+
+\chapter*{Abstract}
+This is my abstract
+
+\tableofcontents
+
+\chapter{Introduction}
+\input{chapters/introduction}
+
+
+\chapter{Conclusion}
+\input{chapters/conclusion}
+
+
+\appendix
+\chapter{Appendix Title}
+\input{chapters/appendixA}
+
+\end{document}
